@@ -1,0 +1,4 @@
+set editing-mode vi
+set show-all-if-ambiguous on
+set match-hidden-files off
+set horizontal-scroll-mode on

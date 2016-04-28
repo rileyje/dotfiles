@@ -1,0 +1,8 @@
+defscrollback 20000
+bind s
+escape ^Xa
+shell -/bin/bash
+hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+screen 0 
+screen 1
+screen 2

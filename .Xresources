@@ -1,0 +1,68 @@
+Xft.dpi:                     100
+URxvt*font:                  xft:DejaVu Sans Mono:size=11
+URxvt*boldFont:              xft:DejaVu Sans Mono:size=11:style=Bold
+!!URxvt*font:                xft:Terminus:8
+!!URxvt*font:                -xos4-terminus-medium-*-*-*-18-*-*-*-*-*-*-*
+!!URxvt*boldFont:            -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-*-*
+!!  - cursor
+!!URxvt*shading:             50
+!!URxvt*transparent:         true
+URxvt*cursorColor:           #DCDCCC
+
+!! urxvt
+URxvt*background:            black
+URxvt*foreground:            white
+!!URxvt*termName:            rxvt-256color
+URxvt*loginShell:            true
+URxvt*scrollBar:             false
+URxvt*secondaryScroll:       true
+URxvt*saveLines:             65535
+URxvt*cursorBlink:           false
+URxvt*urgentOnBell:          true
+!!URxvt*override-redirect:   false
+!!URxvt*borderLess:          false
+!!URxvt*internalBorder:      0
+!!URxvt*externalBorder:      0
+!!URxvt*urlLauncher:         /usr/bin/firefox
+URxvt*urlLauncher:           /usr/bin/google-chrome-stable
+
+
+!! Extensions
+URxvt*perl-lib:              /usr/lib64/urxvt/perl
+URxvt*perl-ext-common:       default,matcher,searchable-scrollback,clipboard,keyboard-select,url-select
+URxvt*matcher.button:        1
+!! Catch ugly URLs
+URxvt.cutchars:              "`()'*<>[]{|}\""
+URxvt.keysym.M-c:            perl:clipboard:copy
+URxvt.keysym.M-s:            perl:keyboard-select:search
+URxvt.keysym.M-v:            perl:clipboard:paste
+URxvt.keysym.M-C-a:          perl:keyboard-select:activate
+URxvt.keysym.M-C-u:          perl:url-select:select_next
+URxvt.keysym.M-C-v:          perl:clipboard:paste_escaped
+
+URxvt.url-select.autocopy:   true
+!!URxvt.url-select.button:   2
+URxvt.url-select.launcher:   /usr/bin/firefox
+URxvt.url-select.underline:  true
+URxvt.clipboard.copycmd:     xsel -ib
+URxvt.clipboard.pastecmd:    xsel -ob
+!!URxvt.clipboard.copycmd:   xclip -i -selection clipboard
+!!URxvt.clipboard.pastecmd:  xclip -o -selection clipboard
+
+*color12:                    #3355ff
+*color4:                     #3465A4
+
+!!XTerm*scrollBar:           false
+!!XTerm*vt100.scrollBar:     false
+XTerm*faceName:              DejaVu Sans Mono
+XTerm*faceSize:              12
+XTerm*background:            black
+XTerm*foreground:            white
+XTerm*multiScroll:           on
+XTerm*jumpScroll:            on
+XTerm*SaveLines:             10000
+XTerm*rightScrollBar:        true
+XTerm*selectToClipboard:     true
+XTerm*bellIsUrgent:          true
+XTerm*trimSelection:         true
+XTerm*charClass:             33:48,35:48,37:48,43:48,44-47:48,61:48,63-64:48,95:48,126:48,58:48
