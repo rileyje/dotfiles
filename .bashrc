@@ -34,3 +34,7 @@ case $- in
 	*)
 		;;
 esac
+
+[[ -f ~/.bashrc-local ]] && . ~/.bashrc-local
+
+unset PROMPT_COMMAND
