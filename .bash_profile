@@ -6,7 +6,7 @@ umask 0022
 export BASH_ENV=~/.bashrc
 export EDITOR=/usr/bin/vim
 export GIT_SSH=$HOME/bin/git-ssh
-export LC_ALL=C
+export LC_COLLATE=C
 export LESS=iXr
 export PATH=$HOME/.local/bin:$HOME/bin:/sbin:/usr/sbin:${PATH}
 export PS1="[\u@\h \W]$ "
