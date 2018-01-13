@@ -1,8 +1,11 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+colorscheme solarized
 filetype plugin indent on
+syntax enable
 syntax on
+
 
 let g:pymode_rope = 0
 let g:pymode_folding = 0

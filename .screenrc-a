@@ -1,3 +1,4 @@
+altscreen
 defscrollback 20000
 bind s
 escape ^Aa
