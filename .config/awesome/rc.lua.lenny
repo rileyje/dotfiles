@@ -54,6 +54,7 @@ local function run_once(cmd_arr)
     end
 end
 
+run_once({ "xrdb -merge /home/john/.Xresources" })
 run_once({ "urxvtd" })
 run_once({ "unclutter -root" }) -- entries must be comma-separated
 run_once({ "xmodmap /home/john/.xmodmaprc" })
@@ -401,12 +402,30 @@ globalkeys = awful.util.table.join(
               {description = "-5%", group = "hotkeys"}),
 
     -- ALSA volume control
+	awful.key({ }, "XF86AudioMute", 
+        function ()
+            os.execute("/home/john/bin/amixer-toggle-mute.sh")
+            beautiful.volume.update()
+        end,
+        {description = "volume mute", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioRaiseVolume",
+        function ()
+            os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
+            beautiful.volume.update()
+        end,
+        {description = "volume up", group = "hotkeys"}),
     awful.key({ altkey }, "Up",
         function ()
             os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioLowerVolume",
+        function ()
+            os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
+            beautiful.volume.update()
+        end,
+        {description = "volume down", group = "hotkeys"}),
     awful.key({ altkey }, "Down",
         function ()
             os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
