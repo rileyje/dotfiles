@@ -35,3 +35,7 @@ if [ -f $BASH_ENV ]; then
 fi
 
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# Cuda
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+
