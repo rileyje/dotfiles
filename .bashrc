@@ -20,10 +20,6 @@ function title() { echo -e "\\033k$1\\033\\setting title to $1"; }
 # feature:
 # export SYSTEMD_PAGER=
 
-if [[ $TERM == "screen" ]]; then
-	export TERM="xterm-color"
-fi
-
 case $- in
 	*i*)
 		# interactive shell stuff
