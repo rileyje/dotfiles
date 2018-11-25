@@ -37,5 +37,7 @@ fi
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Cuda
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export CUDA_PATH=/opt/cuda/cuda
+export PATH=$CUDA_PATH/bin:$PATH
 
+export QUOTING_STYLE="literal"
