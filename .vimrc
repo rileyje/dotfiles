@@ -2,6 +2,9 @@ call pathogen#infect()
 call pathogen#helptags()
 
 colorscheme solarized
+let g:solarized_termcolors=16 
+let g:solarized_termtrans = 1 " eliminate grey background/striping problem
+
 filetype plugin indent on
 syntax enable
 syntax on
